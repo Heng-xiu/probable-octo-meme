@@ -14,6 +14,9 @@ import { SITE } from "./src/config";
 
 import cloudflare from "@astrojs/cloudflare";
 
+// @ts-ignore
+import cloudflareAdapter from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -23,7 +26,7 @@ export default defineConfig({
       extendMarkdownConfig: true,
     }),
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
+      filter: (page) => SITE.showArchives || !page.endsWith("/archives"),
     }),
   ],
 
@@ -120,5 +123,7 @@ export default defineConfig({
     },
   ],
 
-  adapter: cloudflare(),
+  adapter: cloudflareAdapter({
+    prerenderEnvironment: "node",
+  }),
 });
