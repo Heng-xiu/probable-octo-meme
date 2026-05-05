@@ -10,6 +10,7 @@
     "public/pagefind"
   ],
   "compilerOptions": {
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
