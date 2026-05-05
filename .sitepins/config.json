@@ -1,0 +1,8 @@
+{
+  "content": "src/data/blog",
+  "media": "src/data/galleries",
+  "public": "public",
+  "configs": [],
+  "custom-commit": false,
+  "arrangement": []
+}
