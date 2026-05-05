@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
@@ -49,6 +49,6 @@
     "wrangler": "^4.87.0"
   },
   "overrides": {
-    "vite": "^7"
+    "vite": "7.3.2"
   }
 }
